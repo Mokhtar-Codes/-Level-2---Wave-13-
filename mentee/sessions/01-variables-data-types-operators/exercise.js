@@ -9,7 +9,9 @@ console.log(`Cart: ${itemCount} items, total ${cartTotal}`);
 
 // 2. Modify
 
-// Take your Make task. Change the price so it's stored as a **string** — `"12"` instead of `12` — as if it had come from a form. Run your code. Then add these two lines and predict each before running:
+// Take your Make task. Change the price so it's stored as a **string** — `"12"` instead of `12` — as if it had come from a form. Run your code. Then add these two lines and predict each before running: 
+// console.log(price * 2);
+// console.log(price + 2);
 
 const productName = "Notebook"; // using const because the product name won't change
 let price = "12"; // using let because the price might change
