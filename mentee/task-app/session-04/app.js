@@ -4,7 +4,7 @@
 const tasks = [
   { title: "Buy milk", isDone: false, priority: 1 },
   { title: "Call bank", isDone: true, priority: 2 },
-  { title: "Pay rent", isDone: false, priority: 3 }
+  { title: "Pay rent", isDone: false, priority: 3 },
 ];
 
 function getStatus(task) {
@@ -22,6 +22,6 @@ function formatTask(task) {
 }
 
 // Written by hand — Session 5 fixes this.
-console.log(formatTask(tasks[0]));
+console.log(formatTask(tasks[0])); //
 console.log(formatTask(tasks[1]));
 console.log(formatTask(tasks[2]));
