@@ -31,6 +31,11 @@ const tasks = [
   { title: "Walk dog", isDone: false, priority: 1 },
 ];
 
+// const tasks2 = [
+//     {title: "Buy milk"},
+//     {title: "Walk"},
+// ]
+
 const result = tasks
   .filter((task) => task.priority === 1)
   .filter((task) => !task.isDone)
