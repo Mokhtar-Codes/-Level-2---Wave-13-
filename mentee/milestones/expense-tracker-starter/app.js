@@ -96,18 +96,81 @@ function getUnpaidTotal(expenses) {
 }
 
 
+// Stage 3
+
+function getUnpaid(expenses) {
+  return expenses.filter(expense => !expense.isPaid);
+}
+
+function getLabels(expenses) {
+  return expenses.map(expense => expense.label);
+}
+
+function findExpense(expenses, label) {
+  return expenses.find(expense => expense.label === label);
+}
+
+
 // ---------- output ----------
+
+// Stage 1 — Display expenses individually by index.
+// Replaced by a loop in Stage 2.
+
+// console.log(describeExpense(expenses[0]));
+// console.log(getPriority(expenses[0]));
+// console.log(describeExpense(expenses[1]));
+// console.log(getPriority(expenses[1]));
+// console.log(describeExpense(expenses[2]));
+// console.log(getPriority(expenses[2]));
+
 
 // Stage 2
 // A loop replaces the Stage 1 by index output.
 
+// console.log("All expenses:");
+
+// for (const expense of expenses) {
+//   console.log(
+//     describeExpense(expense) + " → " + getPriority(expense)
+//   );
+// }
+
+// console.log("Total: $" + getTotal(expenses).toFixed(2));
+// console.log("Still to pay: $" + getUnpaidTotal(expenses).toFixed(2));
+
+
+// Stage 3
+// We replaced the Stage 2 output loop with forEach.
+
 console.log("All expenses:");
 
-for (const expense of expenses) {
+expenses.forEach(expense => {
   console.log(
     describeExpense(expense) + " → " + getPriority(expense)
   );
-}
+});
 
 console.log("Total: $" + getTotal(expenses).toFixed(2));
 console.log("Still to pay: $" + getUnpaidTotal(expenses).toFixed(2));
+
+console.log("Unpaid:", getLabels(getUnpaid(expenses)));
+
+// Search for an existing expense.
+
+const foundExpense = findExpense(expenses, "Gym");
+
+if (foundExpense) {
+  console.log("Found: " + describeExpense(foundExpense));
+} else {
+  console.log('No expense called "Gym"');
+}
+
+// Search for an expense that does not exist.
+
+const missingExpense = findExpense(expenses, "Holiday");
+
+if (missingExpense) {
+  console.log("Found: " + describeExpense(missingExpense));
+} else {
+  console.log('No expense called "Holiday"');
+}
