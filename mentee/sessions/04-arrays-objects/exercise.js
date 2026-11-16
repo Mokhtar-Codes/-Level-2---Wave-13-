@@ -1,6 +1,9 @@
-/* 1. Parsons
+//1. Parsons
 
-```js
+// Goal output: `Cloudy` — one step per line.
+
+// A => B => C 
+
 const weather = {
   city: "Lisbon",
   days: [
@@ -8,10 +11,6 @@ const weather = {
     { date: "Tue", condition: "Cloudy" },
   ],
 };
-```
-Goal output: `Cloudy` — one step per line.*/
-
-// A => B => C 
 
 const days = weather.days;
 const tuesday = days[1];

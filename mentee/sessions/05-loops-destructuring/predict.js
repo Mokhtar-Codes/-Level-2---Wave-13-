@@ -55,23 +55,23 @@ function age(age) {
 console.log(age(10)); //
 
 // Prediction
-function countUrgent(tasks) {
-  for (const task of tasks) {
-    let count = 0;
-    if (task.priority === 1) {
-      count = count + 1;
-    }
-    return count;
-  }
-}
+// function countUrgent(tasks) {
+//   for (const task of tasks) {
+//     let count = 0;
+//     if (task.priority === 1) {
+//       count = count + 1;
+//     }
+//     return count;
+//   }
+// }
 
-const tasks = [
-  { title: "A", priority: 2 },
-  { title: "B", priority: 1 },
-  { title: "C", priority: 1 },
-];
+// const tasks = [
+//   { title: "A", priority: 2 },
+//   { title: "B", priority: 1 },
+//   { title: "C", priority: 1 },
+// ];
 
-console.log(countUrgent(tasks));
+// console.log(countUrgent(tasks));
 
 // In the form, answer all three:
 
@@ -109,3 +109,22 @@ const fruits = ["Kiwi", "Mango", "Dragon Fruit"];
 //When should we use a for of loop?
 // When you only need the values from an array
 // When you want to show all elements/items in a array.
+
+const tasks = [
+  { title: "A", isDone: true },
+  { title: "B", isDone: false },
+  { title: "C", isDone: false },
+];
+
+let count = 0;
+let last = "";
+
+for (const task of tasks) {
+  if (!task.isDone) {
+    count = count + 1;
+    last = task.title;
+  }
+}
+
+console.log(count); // 2
+console.log(last); // C
