@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Football Squad</title>
+  <style>
+
+    .favourite {
+    color: gold;
+    font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>My Football Squad</h1>
+
+  <form id="player-form">
+    <input id="player-input" placeholder="Player name" />
+    <input id="goals-input" type="number" placeholder="Goals" />
+    <input id="positions-input" placeholder="Positions" />
+    <button>Add</button>
+  </form>
+
+  <button id="delete-favourites">Delete all favourites</button>
+
+  <p id="summary"></p>
+  <ul id="player-list"></ul>
+
+  <script src="./exercise.js" defer></script>
+</body>
