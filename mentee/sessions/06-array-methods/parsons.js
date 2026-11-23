@@ -25,14 +25,14 @@ console.log("parsons.js running");
 
 // `search` is `"Nope"` — a title that isn't in the list. Goal: print `Not found`, **not** crash.
 
-const tasks = [
-  { title: "Buy milk", isDone: false, priority: 1 },
-  { title: "Call bank", isDone: true, priority: 2 },
-  { title: "Pay rent", isDone: false, priority: 1 },
-  { title: "Walk dog", isDone: true, priority: 3 },
-];
+// const tasks = [
+//   { title: "Buy milk", isDone: false, priority: 1 },
+//   { title: "Call bank", isDone: true, priority: 2 },
+//   { title: "Pay rent", isDone: false, priority: 1 },
+//   { title: "Walk dog", isDone: true, priority: 3 },
+// ];
 
-const search = "Nope";
+// const search = "Nope";
 
 // A   const found = tasks.find((task) => task.title === search);
 // B   if (found) {
@@ -42,34 +42,34 @@ const search = "Nope";
 // F   }
 // X   console.log(found.priority);
 
-const found = tasks.find((task) => task.title === search);
-if (found) {
-  console.log(found.priority);
-} else {
-  console.log("Not found");
-}
+// const found = tasks.find((task) => task.title === search);
+// if (found) {
+//   console.log(found.priority);
+// } else {
+//   console.log("Not found");
+// }
 
-const users = [
-  { name: "Ana", age: 22, role: "admin", isActive: true },
-  { name: "Luis", age: 15, role: "user", isActive: false },
-  { name: "Sam", age: 31, role: "user", isActive: true },
-];
+// const users = [
+//   { name: "Ana", age: 22, role: "admin", isActive: true },
+//   { name: "Luis", age: 15, role: "user", isActive: false },
+//   { name: "Sam", age: 31, role: "user", isActive: true },
+// ];
 
-const names = users.map((user) => user.name); // ["Ana","Luis","Sam"]
+// const names = users.map((user) => user.name); // ["Ana","Luis","Sam"]
 
-console.log(users);
-console.log(names);
+// console.log(users);
+// console.log(names);
 
-const adultCount = users.filter((user) => user.age >= 18).length; // 2
-console.log(adultCount);
+// const adultCount = users.filter((user) => user.age >= 18).length; // 2
+// console.log(adultCount);
 
-const admin = users.find((user) => user.role === "admin"); // the Ana object
+// const admin = users.find((user) => user.role === "admin"); // the Ana object
 
-console.log(admin);
+// console.log(admin);
 
-const activeCount = users.filter((user) => user.isActive).length; // 2
+// const activeCount = users.filter((user) => user.isActive).length; // 2
 
-console.log(activeCount);
+// console.log(activeCount);
 
 //map
 //length
